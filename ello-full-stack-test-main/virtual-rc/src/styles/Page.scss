@@ -1,0 +1,87 @@
+.page {
+    border: 10rem solid transparent;
+    border-image: url("../images/page_border.png") 20% round;
+}
+
+.page-single {
+    column-count: 1;
+}
+
+.page-double {
+    column-count: 2;
+    display: flex;
+
+    .page {
+        @extend .page;
+        width: 50%;
+    }
+}
+
+.page-nav {
+    background: rgba(255, 255, 255, 1);
+    position: sticky;
+    display: flex;
+    top: 0;
+    padding: 1rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    .page-nav-link {
+        display: flex;
+        margin-right: auto;
+    }
+
+    .page-nav-form {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .page-nav-pagination {
+        display: flex;
+
+        .page-nav-next,
+        .page-nav-prev {
+            background-color: #555555;
+            color: white;
+            cursor: pointer;
+        }
+
+        .current-page {
+            text-align: center;
+            font-size: 40px;
+            margin: 0 5px;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.page-content {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 0.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    p {
+        padding: 1px;
+        margin: 0.5em 0;
+    }
+}
+
+.page-content:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.page-text-tokenized {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+    span {
+        padding: 0 2px;
+        margin: 0 2px;
+        border: 2px solid;
+        border-radius: 5px;
+    }
+}

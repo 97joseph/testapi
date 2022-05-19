@@ -1,0 +1,43 @@
+// Extend CSS
+@use './partial/Modal';
+@use './partial/Buttons';
+@use './partial/FormSelect';
+
+.app {
+    border: 0rem;
+
+    .app-header {
+        background-image: url("../images/header_bg.jpg");
+        background-color: rgba(0,0,0,0.2);
+        padding: 2rem;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+        h1 {
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px #555555, 0 0 5px #4b4545;
+        }
+    }
+
+    .app-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid;
+        background-color: antiquewhite;
+    }
+
+    .app-body {
+        margin: 2rem;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
